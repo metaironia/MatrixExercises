@@ -15,21 +15,22 @@ double *InputTriangle (size_t *const matrix_size, size_t *const y_size) {
 
     while (scanf ("%Iu", y_size) != 1 || InputCheck()) {
 
-        fprintf (stdout, "Entered y-size of triangle matrix is incorrect! Try once again.");
+        fprintf (stdout, "Entered y-size of triangle matrix is incorrect! Try once again.\n");
         InputClear();
     }
 
     *matrix_size = (*y_size * (*y_size + 1) / 2);
+
     double *triangle_matrix = (double *) calloc (*matrix_size, sizeof (double));
 
     assert (triangle_matrix != NULL && "Not enough memory. Program was finished.");
 
-    fprintf (stdout, "Enter the elements of triangle matrix:");
+    fprintf (stdout, "Enter the elements of triangle matrix separated by ENTER:");
 
     for (size_t i = 0; i < *matrix_size; i++)
         while (scanf ("%lf", &triangle_matrix[i]) != 1 || InputCheck()) {
 
-            fprintf (stdout, "Entered number is incorrect! Try once again.");
+            fprintf (stdout, "Entered number is incorrect! Try once again.\n");
             InputClear();
         }
 
@@ -58,3 +59,4 @@ void InputClear (void) {
     while (getchar() != '\n')
         continue;
 }
+

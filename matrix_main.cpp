@@ -18,7 +18,9 @@ int main (void) {
     BadPrintMatrix (matrix_for_test, sizeY_test_matrix, sizeX_test_matrix);
     GoodPrintMatrix (&matrix_for_test[0][0], sizeY_test_matrix, sizeX_test_matrix);
 
-   // MultiplicateMatrix (first_matrix, second_matrix);
+//TODO MultiplicateMatrix (first_matrix, second_matrix);
+    fprintf (stdout, "\n");
+    fprintf (stdout, "Triangle array exercise:\n");
 
     size_t sizeY_triangle_arr = 0;
     size_t size_of_triangle_arr = 0;
